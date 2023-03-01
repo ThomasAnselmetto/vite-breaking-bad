@@ -1,21 +1,22 @@
 <script>
+import "./components/AppMain.vue";
 export default {
   data() {
     return {
-      title: "hello",
+      title: "YU-GI-OH",
     };
   },
+  components: { AppMain },
 };
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  <AppMain />
 </template>
 
 <Style lang="scss">
-body {
-  h1 {
-    color: red;
-  }
-}
+@use "./scss/style.scss";
 </Style>
