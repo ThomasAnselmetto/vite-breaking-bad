@@ -1,5 +1,5 @@
 <script>
-import "./components/AppMain.vue";
+import AppMain from "./components/AppMain.vue";
 export default {
   data() {
     return {
