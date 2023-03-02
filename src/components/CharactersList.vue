@@ -1,18 +1,22 @@
 <script>
 import CharacterCard from "./CharacterCard.vue";
-
+import { store } from "../data/store";
 export default {
+  data() {
+    return {
+      store,
+    };
+  },
   components: {
     CharacterCard,
   },
-  props: { characters: Array },
 };
 </script>
 
 <template>
   <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
     <CharacterCard
-      v-for="character in characters"
+      v-for="character in store.characters"
       :pic="character.card_images[0].image_url"
       :name="character.name"
       :type="character.type"

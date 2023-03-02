@@ -1,20 +1,21 @@
 <script>
 import AppMain from "./components/AppMain.vue";
 import axios from "axios";
+import { store } from "./data/store";
+
 export default {
   data() {
     return {
+      store,
       title: "YU-GI-OH API",
-      characters: [],
     };
   },
   components: { AppMain },
   created() {
     axios
-      .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=30&offset=100")
+      .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=300&offset=100")
       .then((response) => {
-        console.log(response);
-        this.characters = response.data.data;
+        store.characters = response.data.data;
       });
   },
 };
