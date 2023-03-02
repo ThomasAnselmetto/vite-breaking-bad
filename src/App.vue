@@ -12,7 +12,7 @@ export default {
 
 <template>
   <header>
-    <h1>{{ title }}</h1>
+    <h1 class="p-3">{{ title }}</h1>
   </header>
   <AppMain />
 </template>
