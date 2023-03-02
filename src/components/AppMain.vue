@@ -6,7 +6,11 @@ export default {
 </script>
 
 <template>
-  <main>
+  <select name="type-selector" id="">
+    <option value=""></option>
+  </select>
+
+  <main class="container p-4">
     <CharactersList />
   </main>
 </template>

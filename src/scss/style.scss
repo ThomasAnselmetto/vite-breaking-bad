@@ -5,10 +5,14 @@ body {
   min-height: 4rem;
 }
 .container {
-  height: 8rem;
-
   background-color: $bg-2;
 }
 header {
   background-color: $bg-2;
+}
+.name {
+  color: $color-name;
+}
+.type {
+  color: $color-type;
 }
