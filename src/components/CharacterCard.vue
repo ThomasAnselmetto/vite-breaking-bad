@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <div class="col text-center border">
+  <div class="col text-center border p-2">
     <img :src="pic" class="img-fluid" alt="" />
     <h3 class="name fw-bold">{{ name }}</h3>
     <h4 class="type fw-bold">{{ type }}</h4>

@@ -1,25 +1,11 @@
 <script>
-import axios from "axios";
 import CharacterCard from "./CharacterCard.vue";
 
 export default {
-  data() {
-    return {
-      characters: [],
-    };
-  },
-
   components: {
     CharacterCard,
   },
-  created() {
-    axios
-      .get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=100")
-      .then((response) => {
-        console.log(response);
-        this.characters = response.data.data;
-      });
-  },
+  props: { characters: Array },
 };
 </script>
 
