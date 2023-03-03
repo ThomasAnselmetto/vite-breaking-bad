@@ -44,10 +44,10 @@ export default {
 
 <template>
   <header>
-    <BaseSearch @on-search="fetchFilteredCard" />
     <h1 class="p-3">{{ title }}</h1>
   </header>
   <AppMain :characters="characters"> </AppMain>
+  <BaseSearch @on-search="fetchFilteredCard" />
 </template>
 
 <Style lang="scss">
