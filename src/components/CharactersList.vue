@@ -8,6 +8,7 @@ export default {
       store,
     };
   },
+  props: { characters: Array },
   methods: {},
   components: {
     CharacterCard,

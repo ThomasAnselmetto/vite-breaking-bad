@@ -12,6 +12,9 @@ export default {
     };
   },
   components: { AppMain, BaseSearch },
+  created() {
+    this.fetchCharacters(store.storeUrl);
+  },
   methods: {
     fetchCharacters(url) {
       store.IsPageLoading = true;
@@ -31,10 +34,9 @@ export default {
           // }, 3000);
         });
     },
-    fetchFilteredPage(types) {},
-  },
-  created() {
-    this.fetchCharacters(store.storeUrl);
+    fetchFilteredCard(types) {
+      this.fetchCharacters(`${store.baseUrl}?type=${this.types}`);
+    },
   },
 };
 // creo un method fetch e nel created la richiamo metto url nel get e store.storeUrl nella dichiarazione della funzione
@@ -42,7 +44,7 @@ export default {
 
 <template>
   <header>
-    <BaseSearch @on-search="fetchFilteredPage" />
+    <BaseSearch @on-search="fetchFilteredCard" />
     <h1 class="p-3">{{ title }}</h1>
   </header>
   <AppMain :characters="characters"> </AppMain>

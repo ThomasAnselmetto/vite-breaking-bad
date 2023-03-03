@@ -37,11 +37,8 @@ export default {
 </script>
 
 <template>
-  <select
-    class="form-select w-25 p-2 mb-5"
-    aria-label="Default select example "
-  >
-    <option v-for="cardtype in types">{{}}</option>
+  <select class="form-select w-50 p-2 mb-5" aria-label="Default select example">
+    <option v-for="cardtype in types">{{ cardtype }}</option>
   </select>
 </template>
 
